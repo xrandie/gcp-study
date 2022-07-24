@@ -86,5 +86,6 @@ echo http://$EXTERNAL_IP:8080
 
 ### Remove Kubernetes Cluster
 ```bash
-gcloud container clusters delete
+gcloud container clusters list
+gcloud container clusters delete gke-study
 ```
