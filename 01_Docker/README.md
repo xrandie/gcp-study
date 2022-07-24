@@ -77,7 +77,7 @@ docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}
 ### Deploy
 ```bash
 REGISTRY=gcr.io
-PROJECT_ID=# Your Project ID
+PROJECT_ID=$GOOGLE_CLOUD_PROJECT  # Your Project ID
 IMAGE=node-app
 TAG=0.2
 
@@ -86,11 +86,19 @@ IMAGE_NAME=$REGISTRY/$PROJECT_ID/$IMAGE:$TAG
 docker tag node-app:0.2 $IMAGE_NAME
 docker images
 docker push $IMSAGE_NAME
+
+# GCR URL
+# echo https://gcr.io/$PROJECT_ID
 ```
 
 ```bash
 docker stop $(docker ps -q)
 docker rm $(docker ps -aq)
+
+docker rmi $IMAGE_NAME
+docker rmi node:6
+docker rmi $(docker images -aq) # remove remaining images
+docker images
 
 docker pull $IMAGE_NAME
 docker run -p 4000:80 -d $IMAGE_NAME
