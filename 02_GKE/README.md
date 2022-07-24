@@ -89,3 +89,7 @@ echo http://$EXTERNAL_IP:8080
 gcloud container clusters list
 gcloud container clusters delete gke-study
 ```
+
+## Reference
+
+1. JSONPath Support - Kubectl Guide (https://kubernetes.io/docs/reference/kubectl/jsonpath/)
