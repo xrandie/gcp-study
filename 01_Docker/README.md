@@ -96,3 +96,6 @@ docker pull $IMAGE_NAME
 docker run -p 4000:80 -d $IMAGE_NAME
 curl http://localhost:4000
 ```
+
+### Connect to exposed port on the browser
+![image](https://user-images.githubusercontent.com/21324361/180647920-84ffa0df-4ce1-4c66-8d97-b7142dcf8966.png)
