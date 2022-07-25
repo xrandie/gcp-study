@@ -1,4 +1,4 @@
-# Applications on Kubernetes
+# Orchestrating the Cloud with Kubernetes
 
 ## Course
 * https://www.cloudskillsboost.google/focuses/557?parent=catalog
